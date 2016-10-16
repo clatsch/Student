@@ -5,6 +5,7 @@ public class Student {
     private static int zaehler = 0;
     private int fach;
     private int geburtsjahr;
+    private boolean gender;
 
     //Konstanten
     public static final int MATHEMATIKSTUDIUM = 1;
@@ -17,6 +18,9 @@ public class Student {
     public static final int POLITOLOGIESTUDIUM = 8;
     public static final int PHYSIKSTUDIUM = 9;
     public static final Student PHANTOM;
+
+    public static final boolean MALE = true;
+    public static final boolean FEMALE = false;
 
     //Getter und Setter
     public String getName() {
@@ -63,6 +67,11 @@ public class Student {
     @Override
     public String toString() {
         String res = name + " (" + nummer + ")\n";
+        if (gender)
+            res += " (m) ";
+        else
+            res += " (w) ";
+
         switch(fach) {
             case MATHEMATIKSTUDIUM:
                 return res + " Ein Mathestudent" + "oder auch wezi, oder drei).";
@@ -101,6 +110,23 @@ public class Student {
         zaehler++;
         this.geburtsjahr = geburtsjahr;
     }
+
+    // Aufgabe 8.1
+    public Student (String name, int nummer, int fach, int geburtsjahr) {
+        this(geburtsjahr);
+        this.name = name;
+        this.fach = fach;
+        this.nummer = nummer;
+    }
+
+    //Aufgabe 8.2
+    public Student (String name, int nummer, int fach, int geburtsjahr, boolean gender) {
+        this(name, nummer, fach, geburtsjahr);
+            this.gender = gender;
+        }
+
+
+
 
     /*  =========================
         STATISCHE INITIALISIERUNG

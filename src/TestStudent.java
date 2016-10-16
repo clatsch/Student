@@ -9,8 +9,10 @@ public class TestStudent {
         studi2.setName("Pinco Pallino");
         studi2.setNummer(35479);
 
+        Student studi3 = new Student("Cla Tschenett", 897435, 2, 1955, true);
+
         System.out.println(Student.getZaehler());
-        System.out.println(studi1);
+        System.out.println(studi3);
 
     }
 }
