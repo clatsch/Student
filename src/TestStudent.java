@@ -5,6 +5,8 @@ public class TestStudent {
         studi1.setName("Karla Karlsson");
         studi1.setNummer(12345);
 
+        System.out.println(Student.getZaehler());
+
         System.out.println(studi1);
     }
 }
