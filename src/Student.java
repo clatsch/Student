@@ -125,6 +125,11 @@ public class Student {
             this.gender = gender;
         }
 
+    public Student (int geburtsjahr, boolean gender) {
+        this(geburtsjahr);
+        this.gender = gender;
+    }
+
 
 
 
