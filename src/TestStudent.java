@@ -5,8 +5,12 @@ public class TestStudent {
         studi1.setName("Karla Karlsson");
         studi1.setNummer(12345);
 
-        System.out.println(Student.getZaehler());
+        Student studi2 = new Student();
+        studi2.setName("Pinco Pallino");
+        studi2.setNummer(35479);
 
+        System.out.println(Student.getZaehler());
         System.out.println(studi1);
+
     }
 }

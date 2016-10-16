@@ -19,7 +19,6 @@ public class Student {
     public static final Student PHANTOM;
 
     //Getter und Setter
-
     public String getName() {
         return name;
     }
