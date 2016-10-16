@@ -4,6 +4,7 @@ public class Student {
     private int nummer;
     private static int zaehler = 0;
     private int fach;
+    private int geburtsjahr;
 
     //Konstanten
     public static final int MATHEMATIKSTUDIUM = 1;
@@ -15,6 +16,7 @@ public class Student {
     public static final int GERMANISTIKSTUDIUM = 7;
     public static final int POLITOLOGIESTUDIUM = 8;
     public static final int PHYSIKSTUDIUM = 9;
+    public static final Student PHANTOM;
 
     //Getter und Setter
 
@@ -48,6 +50,10 @@ public class Student {
 
     public void setFach(int fach) {
         this.fach = fach;
+    }
+
+    public int getGeburtsjahr() {
+        return geburtsjahr;
     }
 
     //ValidateNumber
@@ -84,9 +90,29 @@ public class Student {
 
 
     public static Student createStudent() {
-        zaehler++;
-        return new Student();
+       return new Student();
     }
 
+    //Konstruktoren
+    public Student() {
+        this(1970);
+    }
+
+    public Student (int geburtsjahr) {
+        zaehler++;
+        this.geburtsjahr = geburtsjahr;
+    }
+
+    /*  =========================
+        STATISCHE INITIALISIERUNG
+        =========================
+     */
+    static {
+        PHANTOM = new Student(1975);
+        PHANTOM.name = "Erik le Phant";
+        PHANTOM.nummer = 12345;
+        zaehler = 0;
+
+    }
 
 }
