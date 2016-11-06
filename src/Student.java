@@ -70,7 +70,7 @@ public class Student {
 
     @Override
     public String toString() {
-        String res = name + " (" + nummer + ")\n";
+        String res = name + " (" + nummer + ") " + "Jahrgang: " + geburtsjahr +"\n";
         if (gender)
             res += " (m) ";
         else
