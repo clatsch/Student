@@ -59,6 +59,10 @@ public class Student {
         return geburtsjahr;
     }
 
+    public void setGender(boolean gender) {
+        this.gender = gender;
+    }
+
     //ValidateNumber
     public boolean validateNummer() {
         return (nummer > 1000 && nummer <= 99999 && nummer % 2 != 0);
